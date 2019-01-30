@@ -1,0 +1,48 @@
+package ejercicio06;
+
+public class Eurocoin {
+
+	private String valor;
+	private String lado;
+	
+	private Eurocoin (int valor, int lado) {
+		
+		Moneda nuevaMoneda = new Moneda(valor, lado);
+		this.valor = nuevaMoneda.getValor();
+		this.lado = nuevaMoneda.getLado();
+	}
+	
+	public Eurocoin crearMoneda () {
+		
+		int valor = (int) (Math.random() * 8);
+		int lado  =(int) (Math.random() * 2);
+		
+		Eurocoin monedaEurocoin = new Eurocoin(valor, lado);
+		
+		return monedaEurocoin;
+	}
+	
+	
+	
+	
+	@Override
+	public boolean equals(Object obj) {
+
+		Eurocoin f = (Eurocoin) obj;
+
+		if ((this.valor.equals(f.valor) && this.lado.equals(f.lado))
+			||
+			!(this.valor.equals(f.valor) && this.lado.equals(f.lado))) {
+			
+			return true;
+		} else {
+			
+			return false;
+		}
+		
+	}
+	@Override
+	public String toString() {
+		return valor + " - " + lado;
+	}
+}
