@@ -1,0 +1,32 @@
+package ejercicio06;
+
+public class Moneda {
+
+	private static final String[] valores = {"1 centimo", "2 centimos", "5 centimos",
+			"10 centimos", "20 centimos", "50 centimos", "1 euro", "2 euros"};
+	private static final String[] lados = {"cara", "cruz"};
+
+	private String valor;
+	private String lado;
+
+	
+	
+	
+	Moneda (int valor, int lado) {
+
+		this.valor = valores[valor];
+		this.lado = lados[lado];
+	}
+
+	
+	
+	
+	public String getValor() {
+		return valor;
+	}
+
+	public String getLado() {
+		return lado;
+	}
+
+}
